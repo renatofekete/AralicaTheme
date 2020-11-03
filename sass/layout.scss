@@ -1,0 +1,332 @@
+// BASIC
+html {
+  scroll-behavior: smooth;
+}
+body,
+html,
+.site {
+  height: 100%;
+  min-height: 100%;
+}
+input {
+  max-width: 100%;
+}
+textarea {
+  resize: none;
+}
+table {
+  @include s {
+    font-size: 0.8em;
+  }
+}
+.ar-btn {
+  margin-bottom: 0.67em;
+}
+.site {
+  display: flex;
+  flex-direction: column;
+}
+.site-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: $width;
+  width: $width;
+  @include bg {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 2em;
+  }
+  @include m {
+    padding: 0;
+  }
+  margin: 0 auto;
+  .content-area {
+    min-width: 60%;
+    width: 65%;
+    padding: 1em;
+    @include l {
+      width: 100%;
+    }
+  }
+  .entry-content {
+    max-width: 700px;
+  }
+  .widget-area {
+    max-width: 40%;
+    width: 35%;
+    padding: 1em;
+    @include l {
+      width: 100%;
+      max-width: 100%;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+  }
+}
+
+.aralica-front-page {
+  &__h2 {
+    text-align: center;
+    margin: 2em 0;
+    font-size: 3em;
+  }
+}
+.main-menu {
+  width: auto;
+  display: flex;
+  & .primary-menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    @include m {
+      display: none;
+    }
+    &--mobile {
+      z-index: 999;
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      li {
+        padding: 10px;
+      }
+    }
+  }
+  & .hamburger {
+    padding: 15px;
+    cursor: pointer;
+    display: none;
+    @include m {
+      display: block;
+    }
+  }
+  .hamburger-close {
+    display: none;
+    i {
+      pointer-events: none;
+    }
+  }
+
+  & i {
+    pointer-events: none;
+  }
+}
+.main-menu--mobile .hamburger-close {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  position: fixed;
+  right: 40px;
+  top: 100px;
+  z-index: 9999;
+}
+.nav-container {
+  &-inner {
+    display: flex;
+    align-items: center;
+    width: $width;
+    @include bg {
+      width: 100%;
+      padding: 0 2em;
+    }
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    &--lang {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &__logo {
+    width: 100px;
+  }
+  li a {
+    padding: 10px;
+  }
+}
+.menu-lang-container {
+  width: 100%;
+  padding: 10px 0;
+}
+.site-branding__front {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 75vh;
+  min-height: 75vh;
+  align-items: center;
+  &-text {
+    padding: 1.6em;
+  }
+  &-bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: saturation;
+    background-size: cover;
+  }
+}
+
+.header-cta {
+  display: flex;
+  margin: 0;
+  & li {
+    margin-right: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+//* APARTMENTS
+
+.apartments-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include bg {
+    padding: 0 2em;
+  }
+}
+.apartments-card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  @include m {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  &__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  & .ar-btn {
+    margin-top: auto;
+  }
+}
+
+//* FOOTER
+.site-footer {
+  background-color: #34363a;
+  margin-top: auto;
+}
+.footer-inner {
+  padding: 40px 20px;
+  color: white;
+  width: $width;
+  display: flex;
+  margin: 0 auto;
+  @include bg {
+    width: 100%;
+  }
+  @include m {
+    flex-direction: column;
+  }
+
+  &__social,
+  &__activities,
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__info i {
+    margin-right: 10px;
+  }
+  &__partners {
+    display: flex;
+    flex-wrap: wrap;
+    & a {
+      width: 25%;
+    }
+  }
+  &__social {
+    ul {
+      display: flex;
+    }
+    li {
+      margin-right: 5px;
+      & i {
+        font-size: 2em;
+      }
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+.aralica-copy {
+  text-align: center;
+  padding: 40px 0;
+}
+//* APARTMAN ARCHIVE
+.apartments-archive,
+.partners-archive {
+  margin-bottom: 40px;
+  & a {
+    display: flex;
+    width: 100%;
+  }
+  & h3 {
+    line-height: 1;
+    margin: 0;
+  }
+  &__img {
+    width: 25%;
+    img {
+      @include s {
+        height: 100%;
+      }
+    }
+  }
+  &__text {
+    font-size: 1.5em;
+    width: 75%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include s {
+      font-size: 0.7em;
+      padding: 0.5em;
+    }
+  }
+}
+
+//* FORM
+.wpcf7-form {
+  padding: 0 1.6em;
+  & input:not([type='submit']),
+  & textarea {
+    width: 100%;
+  }
+}
+
+.wp-block-column {
+  @include m {
+    flex-basis: 100% !important;
+  }
+}

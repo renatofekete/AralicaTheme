@@ -1,0 +1,25 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+img {
+  display: block;
+}
+
+//* LINKS
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active,
+a:focus-within {
+  text-decoration: none;
+  color: $main-color;
+}
+
+//* LISTS
+
+.header-cta {
+  list-style-type: none;
+}

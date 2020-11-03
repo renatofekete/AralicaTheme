@@ -1,0 +1,133 @@
+//* BTN
+.ar-btn {
+  cursor: pointer;
+  &__link {
+    padding: 0.75em 1.5em;
+    border: 2px solid white;
+    display: inline-block;
+  }
+}
+
+//* HEADER
+.nav-container {
+  .main-menu a {
+    color: #404040;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+.site-branding__front-bg::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(136, 23, 27, 0.5);
+}
+.site-branding__front-text {
+  color: white;
+  h1 {
+    font-size: 4em;
+    @include m {
+      font-size: 2em;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  ul li:first-child a {
+    padding: 0.75em 1.5em;
+    border: 2px solid white;
+    display: inline-block;
+  }
+}
+.lang-item a {
+  font-size: 0.8em;
+  color: #404040;
+}
+.current-lang {
+  font-weight: bold;
+}
+
+.nav-container .primary-menu--mobile {
+  background: $main-color;
+  a {
+    color: white;
+  }
+}
+.hamburger-close {
+  color: white;
+  font-size: 1.6em;
+}
+//* FOOTER
+.site-footer {
+  a {
+    color: white;
+  }
+}
+.aralica-copy {
+  color: white;
+  background: #49484e;
+}
+//* CARD
+.apartments-container {
+  margin-bottom: 40px;
+}
+.apartments-card {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.29),
+    0 6px 6px 0 rgba(0, 0, 0, 0.4);
+  &__text {
+    padding: 1em;
+    background: #88171b;
+    color: white;
+  }
+  a {
+    color: white;
+  }
+  h3 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+}
+
+//* ARCHIVE
+.aralica-archive a {
+  color: #404040;
+}
+
+.apartments-archive,
+.partners-archive {
+  background-color: $main-color;
+  & a {
+    color: white;
+  }
+}
+
+//* WIDGET AREA
+.widget-area {
+  a {
+    color: $main-color;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+//* FORM
+input[type='submit'] {
+  color: $main-color;
+  background: white;
+  border: 2px solid $main-color;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    background: white;
+    border: 2px solid $main-color;
+  }
+}
